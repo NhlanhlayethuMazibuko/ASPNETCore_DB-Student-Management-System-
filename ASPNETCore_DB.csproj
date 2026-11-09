@@ -49,4 +49,11 @@
 
 
 
+	<ItemGroup>
+		<Compile Remove="ASPNETCore_DB.Tests\**" />
+		<Content Remove="ASPNETCore_DB.Tests\**" />
+		<EmbeddedResource Remove="ASPNETCore_DB.Tests\**" />
+		<None Remove="ASPNETCore_DB.Tests\**" />
+	</ItemGroup>
+
 </Project>

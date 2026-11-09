@@ -25,7 +25,7 @@ namespace ASPNETCore_DB.Repositories
         {
             _context.Remove(student);
             _context.SaveChanges();
-            return IsExist(student.StudentNumber);
+            return !IsExist(student.StudentNumber);
         }
 
         public Student Details(string id)
@@ -79,13 +79,8 @@ namespace ASPNETCore_DB.Repositories
 
         public bool IsExist(string id)
         {
-            bool isExist = false;
             Student existStudent = Details(id);
-            if (existStudent == null)
-            {
-                isExist = true;
-            }
-            return isExist;
+            return existStudent != null;
         }
 
     }
